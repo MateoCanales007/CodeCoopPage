@@ -1,0 +1,107 @@
+/* contacto.module.css */
+.main {
+    max-width: 1000px; /* Ancho máximo del contenedor principal */
+    margin: 10px auto 20px auto; 
+    display: flex;
+    font-family: 'Poppins', sans-serif; 
+}
+
+.columnas {
+    margin: auto 0 auto 23px; 
+}
+
+/* Columna de información de formulario */
+.contFormulario {
+    background: rgba(132, 24, 255, 0.37); 
+    padding: 20px; 
+    border-radius: 30px;
+}
+
+.contFormulario h1 {
+    color: #ffffff; 
+    font-weight: 800; 
+    font-size: 2em; 
+    margin-bottom: 20px; 
+}
+
+.contFormulario p {
+    color: #ffffff; 
+    font-size: 1.3em;
+    line-height: 1.5; /* interlineado */
+}
+
+.contFormulario p a {
+    color: #1cff00; 
+    text-decoration: underline; 
+}
+
+.dias em {
+    color: #4ad2f6; 
+    font-weight: 550;
+}
+
+.contFormulario a img {
+    width: 45px;
+    height: 45px;
+}
+
+.sigue {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.redes {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.redes img {
+    margin: 10px; 
+}
+
+/* Formulario de obtención de datos */
+.formulario {
+    background-color: #ffffff;
+    padding: 20px; 
+    border-radius: 20px; 
+    box-shadow: 0 4px 35px rgb(162, 1, 255);
+}
+
+.datCont { /* Cambié .dat-cont a .datCont para seguir la convención de nombres en CSS Modules */
+    width: calc(100% - 5px);
+    margin: 10px auto; 
+    background-color: rgba(238, 237, 237, 0.76);
+    border: none;
+    border-bottom: 2px solid rgba(97, 86, 86, 0.582);
+    border-radius: 6px;
+    outline: none;
+    padding: 10px;
+}
+
+/* BOTÓN */
+
+button.btn {
+    width: calc(100% - 5px);
+    color: #ffffff;
+    background: linear-gradient(to right, #8418ff, #1cff00);
+    font-weight: 700;
+    font-size: 20px;
+    border-radius: 15px;
+    padding: 15px; 
+    border: none; 
+    transition: background-position 2.5s ease;
+    background-size: 500% 500%;
+}
+
+/* Efecto hover en el botón */
+.btn:hover {
+    background: linear-gradient(to right, #1cff00, #8418ff);
+    background-position: right center; 
+    transform: scale(1.05);
+    transition: transform 2.0s; 
+}
+
+.btn:not(:hover) {
+    background-position: left center;
+}

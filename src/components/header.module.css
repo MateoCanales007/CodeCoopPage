@@ -1,0 +1,107 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.fondo {
+    background-color: #1e0642;
+    color: #ffffff;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+header {
+    padding: 20px 0;
+}
+.headerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    display: flex;
+}
+.logo img {
+    width: 210px; 
+}
+header {
+    border-bottom: #8418ff 4px solid;
+    padding: 0;
+}
+nav {
+    flex-grow: 1;
+    text-align: center;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+    padding: 40px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    transition: color 0.3s; 
+}
+
+
+/* Boton */
+
+.theme-toggle span{
+    font-size: 25px;
+}
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin: 0 10px;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #8418ff;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
