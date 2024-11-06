@@ -1,0 +1,71 @@
+/* portafolio.module.css */
+.main {
+    height: 100vh; /* Altura del viewport */
+}
+
+.contenedorTexto {
+    text-align: center; /* Centrar texto */
+}
+
+.tituloTexto h1 {
+    color: #ffffff; /* Color del título */
+    font-family: 'Poppins', sans-serif; /* Fuente personalizada */
+    font-weight: 800; /* Peso de la fuente */
+    font-size: 100px; /* Tamaño de fuente */
+}
+
+.textInvisible {
+    display: none; /* Ocultar texto por defecto */
+    transition: 0.5s; /* Transición suave */
+}
+
+.textVisible {
+    display: block; /* Mostrar texto */
+}
+
+.titleDescription {
+    font-weight: 400; /* Peso de la fuente */
+    font-size: 2rem; /* Tamaño de fuente */
+}
+
+.contenedorPortafolio {
+    display: flex; /* Utiliza Flexbox */
+    justify-content: space-around; /* Espacio entre elementos */
+    align-items: flex-end; /* Alinear elementos al final */
+}
+
+.contentPaginaWeb {
+    text-align: center; /* Centrar texto dentro del contenedor */
+    font-family: 'AnkaCoder', monospace; /* Fuente personalizada */
+    color: #ffffff; /* Color del texto */
+}
+
+.grande {
+    width: 100%; /* Ancho completo para la imagen grande */
+    height: 70vh; /* Altura especificada */
+    transition: 0.50s; /* Transición suave al cambiar estado */
+}
+
+.peque {
+    width: 40%; /* Ancho específico para imágenes pequeñas */
+    height: 100px; /* Altura específica para imágenes pequeñas */
+}
+
+.contenedorAlerta {
+    visibility: hidden; /* Ocultar por defecto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 8vh;
+    background-color: black;
+    color: white;
+    margin-bottom: 2%;
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.visible {
+    visibility: visible; /* Hacer visible cuando sea necesario */
+    transition: 1s; /* Transición suave */
+}

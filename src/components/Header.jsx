@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import style from './header.module.css';
-import { useHoverColors } from '../Hooks/Hover';
+import { useHoverColors } from '../javascript/Hover';
 
 const Header = () => {
     useHoverColors();
