@@ -1,26 +1,31 @@
 /* planes.module.css */
 .container {
-    width: 90%; 
-    max-width: 1200px;
+    width: 100%; 
     margin: 0 auto; 
+    font-family: 'Poppins', sans-serif;
 }
 
 .planesContainer {
     display: flex;
     flex-wrap: wrap; 
     justify-content: space-between;
-    margin: 20px 0; 
+    margin: 10px 0;
 }
 
 .plan {
-    flex: 1 1 calc(33% - 20px); 
-    background: rgba(255, 255, 255, 0.1);
+    flex: 1; 
+    background: rgba(44, 2, 107, 0);
     border-radius: 15px;
-    padding: 20px; 
-    margin: 10px; 
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    margin: 15px; 
 }
 
 @media (max-width: 768px) {
+    .planesContainer {
+        justify-content: center;
+    }
     .plan {
         flex: 1 1 calc(50% - 20px);
     }
@@ -37,21 +42,19 @@
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .planPrice {
     font-size: 48px;
     font-weight: 800; 
     margin-bottom: 20px;
-    font-family: 'Poppins', sans-serif; 
+    text-align: center;
 }
 
 .planFeatures {
-    padding: 0;
-    margin-bottom: 30px;
-    text-align: left;
-    width: 65%;
-    list-style-type: none;
+    margin-bottom: 20px;
+    width: 100%;
 }
 
 .planFeatures li {
@@ -66,6 +69,8 @@
     text-decoration: none;
     font-weight: bold;
     transition: all 0.3s ease;
+    margin-top: auto;
+    text-align: center;
 }
 
 .ctaButton:hover {
@@ -73,11 +78,18 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
+.planBasico {
+    box-shadow: 1px 1px 15px #3802ac;
+}
 
 .planStandar {
-    box-shadow: 1px 3px 40px #ff5dc6; 
+    box-shadow: 1px 1px 25px #0edb44; 
 }
 
 .planAvanzado {
-    box-shadow: 1px 3px 25px #0edb44;
+    box-shadow: 1px 1px 35px #ff5dc6;
+}
+
+.planPaquete {
+    box-shadow: 1px 1px 15px #4ad2f6;
 }

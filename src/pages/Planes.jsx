@@ -5,11 +5,12 @@ class Planes extends React.Component {
     render() {
         return (
             <div>
-                <h1 style={{ textAlign: 'center', fontWeight: 700 }}>PLANES</h1>
+                <h1 style={{ textAlign: 'center', fontWeight: 700, paddingTop: 40}}>PLANES</h1>
                 <main>
                     <div className={style.container}>
                         <div className={style.planesContainer}>
-                            <div className={style.plan}>
+                            {/* Paquete Básico */}
+                            <div className={`${style.plan} ${style.planBasico}`}>
                                 <p className={style.planTitle}>Básica</p>
                                 <h2 className={style.planPrice}>$399.99</h2>
                                 <ul className={style.planFeatures}>
@@ -21,6 +22,8 @@ class Planes extends React.Component {
                                 </ul>
                                 <a href="#" className={style.ctaButton}>SELECCIONAR PLAN</a>
                             </div>
+
+                            {/* Paquete Estándar */}
                             <div className={`${style.plan} ${style.planStandar}`}>
                                 <p className={style.planTitle}>Estándar</p>
                                 <h2 className={style.planPrice}>$595.99</h2>
@@ -36,6 +39,8 @@ class Planes extends React.Component {
                                 </ul>
                                 <a href="#" className={style.ctaButton}>SELECCIONAR PLAN</a>
                             </div>
+
+                            {/* Paquete Avanzado */}
                             <div className={`${style.plan} ${style.planAvanzado}`}>
                                 <p className={style.planTitle}>Avanzada</p>
                                 <h2 className={style.planPrice}>$989.99</h2>
@@ -49,7 +54,8 @@ class Planes extends React.Component {
 
                         {/* Segunda fila de planes */}
                         <div className={style.planesContainer}>
-                            <div className={style.plan}>
+                            {/* Paquete 4 */}
+                            <div className={`${style.plan} ${style.planPaquete}`}>
                                 <p className={style.planTitle}>Paquete 4</p>
                                 <h2 className={style.planPrice}>$344.99</h2>
                                 <ul className={style.planFeatures}>
@@ -59,7 +65,9 @@ class Planes extends React.Component {
                                 </ul>
                                 <a href="#" className={style.ctaButton}>SELECCIONAR PLAN</a>
                             </div>
-                            <div className={style.plan}>
+
+                            {/* Paquete 5 */}
+                            <div className={`${style.plan} ${style.planPaquete}`}>
                                 <p className={style.planTitle}>Paquete 5</p>
                                 <h2 className={style.planPrice}>$209.99</h2>
                                 <ul className={style.planFeatures}>
@@ -69,6 +77,7 @@ class Planes extends React.Component {
                                 </ul>
                                 <a href="#" className={style.ctaButton}>SELECCIONAR PLAN</a>
                             </div>
+
                         </div>
 
                     </div>

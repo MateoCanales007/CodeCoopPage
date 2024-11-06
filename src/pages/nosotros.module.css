@@ -1,11 +1,12 @@
-.p1{
+/* Estilos base */
+.p1 {
     font-size: 25px;
     font-family: 'Poppins', sans-serif;
     margin-right: 70px;
     color: #ffffff;
 }
 
-.p2{
+.p2 {
     font-size: 25px;
     font-family: 'Poppins', sans-serif;
     padding-left: 70px;
@@ -13,21 +14,21 @@
     color: #ffffff;
 }
 
-.vision{
+.vision {
     text-align: right;
-    padding-bottom: 0px;
+    padding-bottom: 0;
     margin-bottom: 10px;
     color: #f645ff;
 }
 
-.mision{
+.mision {
     text-align: left;
-    padding-bottom: 0px;
+    padding-bottom: 0;
     margin-bottom: 10px;
     color: #4ad2f6;
 }
 
-.p3{
+.p3 {
     font-size: 25px;
     font-family: 'Poppins', sans-serif;
     text-align: center;
@@ -37,45 +38,138 @@
     color: #ffffff;
 }
 
-
-.hh1{
+.hh1 {
     font-size: 50px;
-    margin-bottom: 10px;
+    margin: 100px 0 10px 0;
     font-family: Poppins, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-transform: uppercase;
     font-weight: 900;
     text-align: center;
     color: white;
-    margin-top: 60px;
 }
 
 h1 {
     font-size: 70px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     font-family: Poppins, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-transform: uppercase;
     font-weight: 900;
-
 }
 
-.caja{
-    padding-left: 80px;
-    padding-right: 80px;
+.caja {
+    padding: 0 80px;
     display: flex;
     margin-bottom: 110px;
 }
 
-/*imagenes*/
-.imgRosa{
-    width: 280px;
+.imgRosa {
+    width: 260px;
     position: absolute;
     height: 120px;
     margin-top: 10px;
+    transform: translate(0%, -70%);
 }
 
-.imgCeleste{
+.imgCeleste {
     width: 290px;
     height: 290px;
     padding-top: 120px;
+}
 
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+    .p1, .p2, .p3 {
+        font-size: 20px;
+    }
+    
+    .hh1 {
+        font-size: 40px;
+    }
+    
+    h1 {
+        font-size: 55px;
+    }
+    
+    .caja {
+        padding: 0 40px;
+    }
+    
+    .imgRosa, .imgCeleste {
+        width: 240px;
+    }
+    
+    .imgCeleste {
+        height: 240px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .p1, .p2 {
+        margin-right: 30px;
+        padding-left: 30px;
+    }
+    
+    .p3 {
+        padding: 0 50px 40px 50px;
+    }
+    
+    .hh1 {
+        font-size: 35px;
+        margin-top: 40px;
+    }
+    
+    h1 {
+        font-size: 45px;
+    }
+    
+    .caja {
+        padding: 0 20px;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 60px;
+    }
+    
+    .imgRosa {
+        width: 210px;
+        height: 100px;
+    }
+    
+    .imgCeleste {
+        width: 200px;
+        height: 200px;
+        padding-top: 80px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .p1, .p2, .p3 {
+        font-size: 16px;
+        margin-right: 15px;
+        padding-left: 15px;
+    }
+    
+    .p3 {
+        padding: 0 20px 30px 20px;
+    }
+    
+    .hh1 {
+        font-size: 28px;
+        margin-top: 30px;
+    }
+    
+    h1 {
+        font-size: 35px;
+    }
+    
+    .imgRosa {
+        width: 100px;
+        height: 60px;
+        padding-top: 10px;
+    }
+    
+    .imgCeleste {
+        width: 100px;
+        height: 120px;
+        padding-top: 20px;
+    }
 }

@@ -1,58 +1,58 @@
 /* portafolio.module.css */
 .main {
-    height: 100vh; /* Altura del viewport */
+    height: 100vh; 
 }
 
 .contenedorTexto {
-    text-align: center; /* Centrar texto */
+    text-align: center;
 }
 
 .tituloTexto h1 {
-    color: #ffffff; /* Color del título */
-    font-family: 'Poppins', sans-serif; /* Fuente personalizada */
-    font-weight: 800; /* Peso de la fuente */
-    font-size: 100px; /* Tamaño de fuente */
+    color: #ffffff; 
+    font-family: 'Poppins', sans-serif; 
+    font-weight: 800;
+    font-size: 100px; 
 }
 
 .textInvisible {
-    display: none; /* Ocultar texto por defecto */
-    transition: 0.5s; /* Transición suave */
+    display: none; 
+    transition: 0.5s;
 }
 
 .textVisible {
-    display: block; /* Mostrar texto */
+    display: block; 
 }
 
 .titleDescription {
-    font-weight: 400; /* Peso de la fuente */
-    font-size: 2rem; /* Tamaño de fuente */
+    font-weight: 400; 
+    font-size: 2rem; 
 }
 
 .contenedorPortafolio {
-    display: flex; /* Utiliza Flexbox */
-    justify-content: space-around; /* Espacio entre elementos */
-    align-items: flex-end; /* Alinear elementos al final */
+    display: flex; 
+    justify-content: space-around; 
+    align-items: flex-end; 
 }
 
 .contentPaginaWeb {
-    text-align: center; /* Centrar texto dentro del contenedor */
-    font-family: 'AnkaCoder', monospace; /* Fuente personalizada */
-    color: #ffffff; /* Color del texto */
+    text-align: center; 
+    font-family: 'AnkaCoder', monospace; 
+    color: #ffffff;
 }
 
 .grande {
-    width: 100%; /* Ancho completo para la imagen grande */
-    height: 70vh; /* Altura especificada */
-    transition: 0.50s; /* Transición suave al cambiar estado */
+    width: 100%;
+    height: 70vh;
+    transition: 0.50s; 
 }
 
 .peque {
-    width: 40%; /* Ancho específico para imágenes pequeñas */
-    height: 100px; /* Altura específica para imágenes pequeñas */
+    width: 40%; 
+    height: 100px;
 }
 
 .contenedorAlerta {
-    visibility: hidden; /* Ocultar por defecto */
+    visibility: hidden; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,6 +66,6 @@
 }
 
 .visible {
-    visibility: visible; /* Hacer visible cuando sea necesario */
-    transition: 1s; /* Transición suave */
+    visibility: visible; 
+    transition: 1s; 
 }
