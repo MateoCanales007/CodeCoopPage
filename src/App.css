@@ -273,7 +273,7 @@ main {
   }
   
   .corner-image {
-    max-width: 0px;
+    max-width: 100px;
   }
   
   .cta-button {

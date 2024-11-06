@@ -1,42 +1,42 @@
 /* contacto.module.css */
 .main {
-    max-width: 1000px; /* Ancho máximo del contenedor principal */
-    margin: 10px auto 20px auto; 
+    max-width: 1000px;
+    margin: 10px auto 20px auto;
     display: flex;
-    font-family: 'Poppins', sans-serif; 
+    font-family: 'Poppins', sans-serif;
+    padding: 30px 50px; 
 }
 
 .columnas {
-    margin: auto 0 auto 23px; 
+    margin: auto 0 auto 23px;
 }
 
-/* Columna de información de formulario */
 .contFormulario {
-    background: rgba(132, 24, 255, 0.37); 
-    padding: 20px; 
+    background: rgba(132, 24, 255, 0.37);
+    padding: 20px;
     border-radius: 30px;
 }
 
 .contFormulario h1 {
-    color: #ffffff; 
-    font-weight: 800; 
-    font-size: 2em; 
-    margin-bottom: 20px; 
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 2em;
+    margin-bottom: 20px;
 }
 
 .contFormulario p {
-    color: #ffffff; 
+    color: #ffffff;
     font-size: 1.3em;
-    line-height: 1.5; /* interlineado */
+    line-height: 1.5;
 }
 
 .contFormulario p a {
-    color: #1cff00; 
-    text-decoration: underline; 
+    color: #1cff00;
+    text-decoration: underline;
 }
 
 .dias em {
-    color: #4ad2f6; 
+    color: #4ad2f6;
     font-weight: 550;
 }
 
@@ -51,26 +51,26 @@
 }
 
 .redes {
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .redes img {
-    margin: 10px; 
+    margin: 10px;
 }
 
-/* Formulario de obtención de datos */
 .formulario {
     background-color: #ffffff;
-    padding: 20px; 
-    border-radius: 20px; 
+    padding: 20px;
+    border-radius: 20px;
     box-shadow: 0 4px 35px rgb(162, 1, 255);
 }
 
-.datCont { /* Cambié .dat-cont a .datCont para seguir la convención de nombres en CSS Modules */
+.datCont {
     width: calc(100% - 5px);
-    margin: 10px auto; 
+    margin: 10px auto;
     background-color: rgba(238, 237, 237, 0.76);
     border: none;
     border-bottom: 2px solid rgba(97, 86, 86, 0.582);
@@ -79,8 +79,6 @@
     padding: 10px;
 }
 
-/* BOTÓN */
-
 button.btn {
     width: calc(100% - 5px);
     color: #ffffff;
@@ -88,20 +86,127 @@ button.btn {
     font-weight: 700;
     font-size: 20px;
     border-radius: 15px;
-    padding: 15px; 
-    border: none; 
+    padding: 15px;
+    border: none;
     transition: background-position 2.5s ease;
     background-size: 500% 500%;
 }
 
-/* Efecto hover en el botón */
 .btn:hover {
     background: linear-gradient(to right, #1cff00, #8418ff);
-    background-position: right center; 
+    background-position: right center;
     transform: scale(1.05);
-    transition: transform 2.0s; 
+    transition: transform 2.0s;
 }
 
 .btn:not(:hover) {
     background-position: left center;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+    .main {
+        max-width: 800px;
+    }
+
+    .contFormulario h1 {
+        font-size: 1.8em;
+    }
+
+    .contFormulario p {
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+        flex-direction: column;
+        margin: 10px auto;
+    }
+
+    .columnas {
+        margin: 20px 0;
+    }
+
+    .contFormulario {
+        margin-bottom: 20px;
+    }
+
+    .contFormulario h1 {
+        font-size: 1.6em;
+        text-align: center;
+    }
+
+    .contFormulario p {
+        font-size: 1.1em;
+        text-align: center;
+    }
+
+    .redes {
+        justify-content: center;
+    }
+
+    .contFormulario a img {
+        width: 40px;
+        height: 40px;
+    }
+
+    button.btn {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main {
+        padding: 0 15px;
+    }
+
+    .contFormulario {
+        padding: 15px;
+    }
+
+    .contFormulario h1 {
+        font-size: 1.4em;
+    }
+
+    .contFormulario p {
+        font-size: 1em;
+    }
+
+    .formulario {
+        padding: 15px;
+    }
+
+    .datCont {
+        padding: 8px;
+    }
+
+    button.btn {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .contFormulario a img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .redes img {
+        margin: 8px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .contFormulario h1 {
+        font-size: 1.2em;
+    }
+
+    .contFormulario p {
+        font-size: 0.9em;
+    }
+
+    button.btn {
+        font-size: 14px;
+        padding: 10px;
+    }
 }
