@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './Nosotros.module.css';
+import style from './nosotros.module.css';
 
 class Nosotros extends React.Component {
     render() {
