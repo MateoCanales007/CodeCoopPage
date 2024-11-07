@@ -1,3 +1,4 @@
+// Header.jsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import style from './header.module.css';
@@ -6,6 +7,7 @@ import { useHoverColors } from '../javascript/Hover';
 const Header = () => {
     const { handleMouseOver } = useHoverColors();
     const [linkColors, setLinkColors] = useState({});
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const handleLinkHover = (linkId) => {
         setLinkColors(prev => ({
@@ -21,6 +23,10 @@ const Header = () => {
         }));
     };
 
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
     return (
         <header>
             <div className={style.container}>
@@ -31,7 +37,17 @@ const Header = () => {
                             alt="CodeCoop Logo"
                         />
                     </div>
-                    <nav>
+                    
+                    <button 
+                        className={`${style.menuButton} ${isMenuOpen ? style.open : ''}`}
+                        onClick={toggleMenu}
+                    >
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                    <nav className={`${style.navMenu} ${isMenuOpen ? style.active : ''}`}>
                         <ul>
                             <li>
                                 <Link
@@ -40,6 +56,7 @@ const Header = () => {
                                     style={{ color: linkColors['menu'] || '' }}
                                     onMouseEnter={() => handleLinkHover('menu')}
                                     onMouseLeave={() => handleLinkLeave('menu')}
+                                    onClick={() => setIsMenuOpen(false)}
                                 >
                                     MENU
                                 </Link>
@@ -51,6 +68,7 @@ const Header = () => {
                                     style={{ color: linkColors['nosotros'] || '' }}
                                     onMouseEnter={() => handleLinkHover('nosotros')}
                                     onMouseLeave={() => handleLinkLeave('nosotros')}
+                                    onClick={() => setIsMenuOpen(false)}
                                 >
                                     NOSOTROS
                                 </Link>
@@ -62,6 +80,7 @@ const Header = () => {
                                     style={{ color: linkColors['planes'] || '' }}
                                     onMouseEnter={() => handleLinkHover('planes')}
                                     onMouseLeave={() => handleLinkLeave('planes')}
+                                    onClick={() => setIsMenuOpen(false)}
                                 >
                                     PLANES
                                 </Link>
@@ -73,6 +92,7 @@ const Header = () => {
                                     style={{ color: linkColors['contacto'] || '' }}
                                     onMouseEnter={() => handleLinkHover('contacto')}
                                     onMouseLeave={() => handleLinkLeave('contacto')}
+                                    onClick={() => setIsMenuOpen(false)}
                                 >
                                     CONTACTO
                                 </Link>
@@ -84,6 +104,7 @@ const Header = () => {
                                     style={{ color: linkColors['blog'] || '' }}
                                     onMouseEnter={() => handleLinkHover('blog')}
                                     onMouseLeave={() => handleLinkLeave('blog')}
+                                    onClick={() => setIsMenuOpen(false)}
                                 >
                                     PORTAFOLIO
                                 </Link>
