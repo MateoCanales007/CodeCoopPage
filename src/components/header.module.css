@@ -52,56 +52,83 @@ nav ul li a {
 }
 
 
-/* Boton */
 
-.theme-toggle span{
-    font-size: 25px;
-}
-.theme-toggle {
-    display: flex;
-    align-items: center;
-    padding-top: 20px;
-    padding-left: 20px;
-}
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-    margin: 0 10px;
-}
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-.slider {
-    position: absolute;
+/* Añade estos estilos a tu header.module.css */
+
+.menuButton {
+    display: none;
+    background: none;
+    border: none;
     cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    transition: .4s;
-    border-radius: 34px;
-}
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    transition: .4s;
-    border-radius: 50%;
+    padding: 0;
+    z-index: 1000;
 }
 
-input:checked + .slider {
-    background-color: #8418ff;
+.menuButton span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
 }
 
-input:checked + .slider:before {
-    transform: translateX(26px);
+@media screen and (max-width: 768px) {
+    .menuButton {
+        display: block;
+    }
+
+    .menuButton.open span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menuButton.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menuButton.open span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .navMenu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: #1e0642;
+        padding-top: 60px;
+        transition: 0.3s;
+        z-index: 999;
+    }
+
+    .navMenu.active {
+        left: 0;
+    }
+
+    .navMenu ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navMenu ul li {
+        display: block;
+        margin: 10px 0;
+        padding: 10px 0;
+    }
+
+    .headerContent {
+        padding: 1rem;
+    }
+
+    .logo img {
+        width: 150px;
+    }
+}
+
+/* Para pantallas más pequeñas */
+@media screen and (max-width: 480px) {
+    .logo img {
+        width: 120px;
+    }
 }
