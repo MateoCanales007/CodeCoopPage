@@ -53,8 +53,7 @@ nav ul li a {
 
 
 
-/* Añade estos estilos a tu header.module.css */
-
+/* Esto lo añado al .jsx para el menu responsive */
 .menuButton {
     display: none;
     background: none;
