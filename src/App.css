@@ -25,11 +25,20 @@ body, html {
   padding-left: 50px;
   max-width: 100%;
   height: auto;
+  opacity: 0;
+}
+
+.image-container img.fade-in {
+  animation: fadeIn 0.6s ease forwards;
+}
+/* ANIMACION */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 #img1, #img2, #img3 {
   position: absolute;
-  opacity: 100;
   transition: opacity 2s ease;
 }
 
@@ -50,15 +59,8 @@ body, html {
   transform: translate(35%, 135%);
 }
 
-/* ANIMACION */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
 
-.fade-in {
-  animation: fadeIn 0.6s ease forwards;
-}
+
 
 /* MAIN CONTAINER DIV */
 main {
@@ -128,9 +130,9 @@ main {
 /* imagen en la esquina */
 .corner-image {
   position: absolute;
-  top: 595px;
+  top: 485px;
   right: 0px;
-  width: 100%;
+  width: 450px;
   max-width: 500px;
   z-index: 0;
   transform: translateY(100%);
@@ -162,22 +164,29 @@ main {
   }
   
   #img1 {
-    transform: translate(-40%, -10%);
-    max-width: 280px;
+    transform: translate(30%, -1%);
+    max-width: 240px;
   }
 
   #img2 {
-    transform: translate(0%, 25%);
-    max-width: 260px;
+    transform: translate(-20%, 70%);
+    max-width: 220px;
   }
 
   #img3 {
-    transform: translate(50%, 95%);
-    max-width: 270px;
+    transform: translate(25%, 180%);
+    max-width: 240px;
   }
   
   .corner-image {
-    max-width: 400px;
+    position: absolute;
+    top: 675px;
+    right: 20px;
+    width: 340px;
+    max-width: 500px;
+    z-index: 0;
+    transform: translateY(100%);
+    transition: transform 0.5s ease-out;
   }
 }
 
@@ -252,7 +261,6 @@ main {
     margin-top: 20px;
   }
 
-  
   .image-container {
     height: 200px;
   }
@@ -273,9 +281,16 @@ main {
   }
   
   .corner-image {
-    max-width: 100px;
+    position: absolute;
+    top: 720px;
+    right: 55px;
+    width: 260px;
+    max-width: 500px;
+    z-index: 0;
+    transform: translateY(100%);
+    transition: transform 0.5s ease-out;
   }
-  
+    
   .cta-button {
     padding: 8px 16px;
   }
