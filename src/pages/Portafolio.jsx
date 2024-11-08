@@ -13,9 +13,9 @@ class Portafolio extends React.Component {
     }
 
     componentDidMount() {
-        const img1 = this.img1Ref.current; 
-        const img2 = this.img2Ref.current; 
-        const img3 = this.img3Ref.current; 
+        const img1 = this.img1Ref.current;
+        const img2 = this.img2Ref.current;
+        const img3 = this.img3Ref.current;
         const texto1 = this.texto1Ref.current;
         const texto2 = this.texto2Ref.current;
         const texto3 = this.texto3Ref.current;
@@ -51,73 +51,73 @@ class Portafolio extends React.Component {
         };
 
         img1.addEventListener('click', () => handleClick(img1, texto1, img2, img3));
-        img1.addEventListener('dblclick', () => window.open("https://mybookingkodigoapp.netlify.app/login")); 
+        img1.addEventListener('dblclick', () => window.open("https://mybookingkodigoapp.netlify.app/login"));
 
         img2.addEventListener('click', () => handleClick(img2, texto2, img1, img3));
-        img2.addEventListener('dblclick', () => window.open("https://alejandroahf.github.io/Peludos-en-Casa/")); 
+        img2.addEventListener('dblclick', () => window.open("https://alejandroahf.github.io/Peludos-en-Casa/"));
 
         img3.addEventListener('click', () => handleClick(img3, texto3, img1, img2));
-img3.addEventListener('dblclick', () => window.open("https://superb-pavlova-94e02e.netlify.app/")); 
+        img3.addEventListener('dblclick', () => window.open("https://statuesque-cassata-092e5f.netlify.app"));
 
-}
+    }
 
-render() {
-    return (
-        <main className={style.main}>
-            <section>
-                <div className={style.contenedorTexto}>
-                    <div className={style.tituloTexto}>
-                        <h1>PORTAFOLIO</h1>
+    render() {
+        return (
+            <main className={style.main}>
+                <section>
+                    <div className={style.contenedorTexto}>
+                        <div className={style.tituloTexto}>
+                            <h1>PORTAFOLIO</h1>
+                        </div>
+                        <div className={style.texto}>
+                            <p>Estos son algunos de los proyectos que hemos realizado. <br /> Si está en movil, darle doble tap para ver el sitio web.</p>
+                        </div>
                     </div>
-                    <div className={style.texto}>
-                        <p>Estos son algunos de los proyectos que hemos realizado. <br/> Si está en movil, darle doble tap para ver el sitio web.</p>
+                </section>
+                <section className={style.contenedorAlerta}>
+                    <p>Haga doble clic para ver el sitio web</p>
+                </section>
+                <section className={style.contenedorPortafolio}>
+                    <div className={style.contentPaginaWeb}>
+                        <img
+                            ref={this.img1Ref}
+                            className={style.grande}
+                            src="https://res.cloudinary.com/dj848z4er/image/upload/v1731042499/jx2ihofaozsobajlvqic.png"
+                            alt="Sistema para alojamientos de hotel"
+                        />
+                        <div ref={this.texto1Ref} className={style.textInvisible}>
+                            <p className={style.titleDescription}>Alojamientos</p>
+                            <p>Sistema de alojamientos de hotel.</p>
+                        </div>
                     </div>
-                </div>
-            </section>
-            <section className={style.contenedorAlerta}>
-                <p>Haga doble clic para ver el sitio web</p>
-            </section>
-            <section className={style.contenedorPortafolio}>
-                <div className={style.contentPaginaWeb}>
-                    <img
-                        ref={this.img1Ref}
-                        className={style.grande}
-                        src="https://res.cloudinary.com/dj848z4er/image/upload/v1731042499/jx2ihofaozsobajlvqic.png"
-                        alt="Sistema para alojamientos de hotel"
-                    />
-                    <div ref={this.texto1Ref} className={style.textInvisible}>
-                        <p className={style.titleDescription}>Alojamientos</p>
-                        <p>Sistema de alojamientos de hotel.</p>
+                    <div className={style.contentPaginaWeb}>
+                        <img
+                            ref={this.img2Ref}
+                            className={style.peque}
+                            src="https://res.cloudinary.com/dksv7n9bg/image/upload/v1726070575/unyvwlpl5ubl4cgl8p1i.png"
+                            alt="Página web para la adopción de perritos"
+                        />
+                        <div ref={this.texto2Ref} className={style.textInvisible}>
+                            <p className={style.titleDescription}>Peludos en Casa</p>
+                            <p>Se realizó una página web para la adopción de perritos.</p>
+                        </div>
                     </div>
-                </div>
-                <div className={style.contentPaginaWeb}>
-                    <img
-                        ref={this.img2Ref}
-                        className={style.peque}
-                        src="https://res.cloudinary.com/dksv7n9bg/image/upload/v1726070575/unyvwlpl5ubl4cgl8p1i.png"
-                        alt="Página web para la adopción de perritos"
-                    />
-                    <div ref={this.texto2Ref} className={style.textInvisible}>
-                        <p className={style.titleDescription}>Peludos en Casa</p>
-                        <p>Se realizó una página web para la adopción de perritos.</p>
+                    <div className={style.contentPaginaWeb}>
+                        <img
+                            ref={this.img3Ref}
+                            className={style.peque}
+                            src="https://res.cloudinary.com/dj848z4er/image/upload/v1731081098/iqputdaihpfgahawdvoc.png"
+                            alt="Gestor de citas médicas"
+                        />
+                        <div ref={this.texto3Ref} className={style.textInvisible}>
+                            <p className={style.titleDescription}>Sistema de gestion de citas médicas</p>
+                            <p>Se realizó una página para una clinica.</p>
+                        </div>
                     </div>
-                </div>
-                <div className={style.contentPaginaWeb}>
-                    <img
-                        ref={this.img3Ref}
-                        className={style.peque}
-                        src="https://res.cloudinary.com/dj848z4er/image/upload/v1731076386/yk7ntfk0swcz6oesdggd.png"
-                        alt="Página de una clinica"
-                    />
-                    <div ref={this.texto3Ref} className={style.textInvisible}>
-                        <p className={style.titleDescription}>Sistema de gestion de productos</p>
-                        <p>Se realizó una página para gestionar productos.</p>
-                    </div>
-                </div>
-            </section>
-        </main>
-    );
-}
+                </section>
+            </main>
+        );
+    }
 }
 
 export default Portafolio;
