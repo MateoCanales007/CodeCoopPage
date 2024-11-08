@@ -51,7 +51,7 @@ class Portafolio extends React.Component {
         };
 
         img1.addEventListener('click', () => handleClick(img1, texto1, img2, img3));
-        img1.addEventListener('dblclick', () => window.open("https://alejandroahf.github.io/Pagina-let-s-meet/")); 
+        img1.addEventListener('dblclick', () => window.open("https://mybookingkodigoapp.netlify.app/login")); 
 
         img2.addEventListener('click', () => handleClick(img2, texto2, img1, img3));
         img2.addEventListener('dblclick', () => window.open("https://alejandroahf.github.io/Peludos-en-Casa/")); 
@@ -70,7 +70,7 @@ render() {
                         <h1>PORTAFOLIO</h1>
                     </div>
                     <div className={style.texto}>
-                        <p>Estos son algunos de los proyectos que hemos realizado. <br/> Si está en movil, darle doble tap para ver el sitio web</p>
+                        <p>Estos son algunos de los proyectos que hemos realizado. <br/> Si está en movil, darle doble tap para ver el sitio web.</p>
                     </div>
                 </div>
             </section>
@@ -82,12 +82,12 @@ render() {
                     <img
                         ref={this.img1Ref}
                         className={style.grande}
-                        src="https://res.cloudinary.com/dksv7n9bg/image/upload/v1726070576/hy2u5ndvxxwvmrmmhfrw.png"
-                        alt="Página web para un restaurante"
+                        src="https://res.cloudinary.com/dj848z4er/image/upload/v1731042499/jx2ihofaozsobajlvqic.png"
+                        alt="Sistema para alojamientos de hotel"
                     />
                     <div ref={this.texto1Ref} className={style.textInvisible}>
-                        <p className={style.titleDescription}>Let's Meat</p>
-                        <p>Se realizó una página web para un restaurante.</p>
+                        <p className={style.titleDescription}>Alojamientos</p>
+                        <p>Sistema de alojamientos de hotel. <br /> usuario: abner95@example.com <br /> contraseña: $2y$12$uYSt7J5Zwqho9cUpTkWCW.I4OVojaUjwxHMBZs4DBc48xvH.6Rnxa</p>
                     </div>
                 </div>
                 <div className={style.contentPaginaWeb}>
