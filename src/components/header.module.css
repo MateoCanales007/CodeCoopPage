@@ -51,6 +51,27 @@ nav ul li a {
     transition: color 0.3s ease; 
 }
 
+.buttonLogin {
+    background-color: #007bff; 
+    color: white;
+    border: none; 
+    border-radius: 4px; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    font-family: 'Poppins', sans-serif; 
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+
+.buttonLogin:hover {
+    background-color: #0056b3; 
+    transform: translateY(-2px); 
+}
+
+.buttonLogin:active {
+    transform: translateY(1px); 
+}
 
 
 /* Esto lo añado al .jsx para el menu responsive */

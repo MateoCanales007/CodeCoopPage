@@ -1,5 +1,4 @@
-// Header.jsx
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import style from './header.module.css';
 import { useHoverColors } from '../javascript/Hover';
@@ -14,6 +13,18 @@ const Header = () => {
     const [linkColors, setLinkColors] = useState({});
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [buttonColorIndex, setButtonColorIndex] = useState(0); // Índice del color actual
+
+    const colors = ['#6c8af1', '#4ad2f6', '#1cff00', '#f645ff'];
+
+    // Cambia el color del botón cada 1 segundo
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            setButtonColorIndex(prevIndex => (prevIndex + 1) % colors.length); // Ciclo a través de los colores
+        }, 1000); // Cambia cada 1000 ms (1 segundo)
+
+        return () => clearInterval(intervalId); // Limpia el intervalo al desmontar
+    }, [colors]);
 
     const handleLinkHover = (linkId) => {
         setLinkColors(prev => ({
@@ -83,15 +94,16 @@ const Header = () => {
                             <li>
                                 {currentUser ? (
                                     <button
-                                        className={style.nav}
+                                        className={`${style.nav} ${style.buttonLogin}`} // Añade la clase buttonLogin
                                         onClick={handleLogout}
                                     >
                                         CERRAR SESIÓN
                                     </button>
                                 ) : (
                                     <button
-                                        className={style.nav}
+                                        className={`${style.nav} ${style.buttonLogin}`} // Añade la clase buttonLogin
                                         onClick={() => setIsModalOpen(true)}
+                                        style={{ backgroundColor: colors[buttonColorIndex] }} // Aplica el color dinámico
                                     >
                                         LOGIN
                                     </button>
