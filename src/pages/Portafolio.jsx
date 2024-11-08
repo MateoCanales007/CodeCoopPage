@@ -57,7 +57,7 @@ class Portafolio extends React.Component {
         img2.addEventListener('dblclick', () => window.open("https://alejandroahf.github.io/Peludos-en-Casa/")); 
 
         img3.addEventListener('click', () => handleClick(img3, texto3, img1, img2));
-        img3.addEventListener('dblclick', () => window.open("https://alejandroahf.github.io/Landingpage-SIMAN/")); 
+img3.addEventListener('dblclick', () => window.open("https://superb-pavlova-94e02e.netlify.app/")); 
 
 }
 
@@ -106,12 +106,12 @@ render() {
                     <img
                         ref={this.img3Ref}
                         className={style.peque}
-                        src="https://res.cloudinary.com/dksv7n9bg/image/upload/v1726070576/x82rueeccrjtgmfjqpwq.png"
-                        alt="Página web para la empresa Siman"
+                        src="https://res.cloudinary.com/dj848z4er/image/upload/v1731076386/yk7ntfk0swcz6oesdggd.png"
+                        alt="Página de una clinica"
                     />
                     <div ref={this.texto3Ref} className={style.textInvisible}>
                         <p className={style.titleDescription}>Siman</p>
-                        <p>Se realizó una página web para la empresa Siman.</p>
+                        <p>Se realizó una página para una clinica.</p>
                     </div>
                 </div>
             </section>
