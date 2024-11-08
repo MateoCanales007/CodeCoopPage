@@ -28,7 +28,7 @@ class Nosotros extends React.Component {
                         </p>
                     </div>
                     <img className={style.imgCeleste}
-                        src="https://res.cloudinary.com/dj848z4er/image/upload/v1727885705/jknenhy1ctarddfrji49.png" alt="" />
+                        src="https://res.cloudinary.com/dj848z4er/image/upload/v1727885705/jknenhy1ctarddfrji49.png" alt="Grupo de tres personas con un foco encendido" />
                     <div>
                         <h1 className={style.vision}>Visión</h1>
                         <p className={style.p2}>Ser líderes en el desarrollo de páginas y aplicaciones web, reconocidos por nuestra
