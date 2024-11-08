@@ -87,7 +87,7 @@ render() {
                     />
                     <div ref={this.texto1Ref} className={style.textInvisible}>
                         <p className={style.titleDescription}>Alojamientos</p>
-                        <p>Sistema de alojamientos de hotel. <br /> usuario: abner95@example.com <br /> contraseña: $2y$12$uYSt7J5Zwqho9cUpTkWCW.I4OVojaUjwxHMBZs4DBc48xvH.6Rnxa</p>
+                        <p>Sistema de alojamientos de hotel.</p>
                     </div>
                 </div>
                 <div className={style.contentPaginaWeb}>

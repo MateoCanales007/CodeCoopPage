@@ -1,4 +1,7 @@
+// App.jsx
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { AuthProvider } from './context/AuthContext';
 
 import Home from './pages/Home';
 import Nosotros from './pages/Nosotros'; 
@@ -9,13 +12,9 @@ import Portafolio from './pages/Portafolio';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; 
-
-import './App.css';
-
 function App() {
   return (
-    <div>
+    <AuthProvider>
       <Router>
         <Header />
         <Routes>
@@ -27,7 +26,7 @@ function App() {
         </Routes>
         <Footer />
       </Router>
-    </div>
+    </AuthProvider>
   );
 }
 
