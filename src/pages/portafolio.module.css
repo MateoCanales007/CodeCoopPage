@@ -13,6 +13,14 @@
     font-size: 100px;
 }
 
+.texto {
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
 .textInvisible {
     display: none;
     transition: 0.5s;

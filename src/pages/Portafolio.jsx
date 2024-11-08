@@ -69,6 +69,9 @@ render() {
                     <div className={style.tituloTexto}>
                         <h1>PORTAFOLIO</h1>
                     </div>
+                    <div className={style.texto}>
+                        <p>Estos son algunos de los proyectos que hemos realizado. <br/> Si está en movil, darle doble tap para ver el sitio web</p>
+                    </div>
                 </div>
             </section>
             <section className={style.contenedorAlerta}>
