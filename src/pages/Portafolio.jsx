@@ -110,8 +110,8 @@ render() {
                         alt="Página de una clinica"
                     />
                     <div ref={this.texto3Ref} className={style.textInvisible}>
-                        <p className={style.titleDescription}>Siman</p>
-                        <p>Se realizó una página para una clinica.</p>
+                        <p className={style.titleDescription}>Sistema de gestion de productos</p>
+                        <p>Se realizó una página para gestionar productos.</p>
                     </div>
                 </div>
             </section>
