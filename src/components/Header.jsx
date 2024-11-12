@@ -17,11 +17,10 @@ const Header = () => {
 
     const colors = ['#6c8af1', '#4ad2f6', '#1cff00', '#f645ff'];
 
-    // Cambia el color del botón cada 1 segundo
     useEffect(() => {
         const intervalId = setInterval(() => {
             setButtonColorIndex(prevIndex => (prevIndex + 1) % colors.length); // Ciclo a través de los colores
-        }, 1000); // Cambia cada 1000 ms (1 segundo)
+        }, 1000);
 
         return () => clearInterval(intervalId); // Limpia el intervalo al desmontar
     }, [colors]);
